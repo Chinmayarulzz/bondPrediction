@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -r built && tsc",
+    "start": "node built/index",
+    "test": "jest",
+    "testOS": "npm run build && ts-jest && npm run test built/properties/"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/Chinmayarulzz/bondPrediction/issues"
   },
-  "homepage": "https://github.com/Chinmayarulzz/bondPrediction#readme"
+  "homepage": "https://github.com/Chinmayarulzz/bondPrediction#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "@types/jest": "^29.5.11",
+    "ts-node": "^10.9.2"
+  }
 }

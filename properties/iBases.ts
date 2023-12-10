@@ -1,13 +1,19 @@
-class OrbitalStrength{
+export class OrbitalStrength{
 
     private strength: number;
     private atomicNumber: number;
 
-    public OrbitalStrength(atomicNumber: number){
+    constructor(atomicNumber: number = 0){
         this.atomicNumber = atomicNumber;
+        this.strength = 1;
     }
 
-    getOrbitalDistribution(): String{
+    Strength(): number{
+        
+        return this.strength || -1;
+    }
+
+    OrbitalDistribution(): String{
         
         return "";
     }
