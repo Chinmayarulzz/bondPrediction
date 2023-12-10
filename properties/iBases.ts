@@ -1,3 +1,5 @@
+import { Logger } from "../logger/Logger";
+
 export class OrbitalStrength{
 
     private strength: number;
@@ -10,12 +12,20 @@ export class OrbitalStrength{
 
     Strength(): number{
         
+        Logger.log({
+            "Strength": this.strength
+        });
         return this.strength || -1;
     }
 
     OrbitalDistribution(): String{
         
-        return "";
+        let orbitalDistribution: String = "";
+
+        Logger.log({
+            "Orbital Distribution": orbitalDistribution
+        })
+        return orbitalDistribution;
     }
 
 }
